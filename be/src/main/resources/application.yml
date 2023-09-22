@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    include: dev
+  config:
+    use-legacy-processing: true
+  application:
+    name: maidooBackend
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate.format_sql: true
+      hibernate.dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    mode: HTML
+file:
+  upload-dir: /home/maidoo_uploads
+  max-size: 1024 # MB
+info:
+  # Comma separated list of profiles that will trigger the ribbon to show
+  display-ribbon-on-profiles: 'dev'
